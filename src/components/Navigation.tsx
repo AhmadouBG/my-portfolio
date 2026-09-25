@@ -15,13 +15,23 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../i18n/translations';
 
 const drawerWidth = 240;
-const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Projects', 'projects'], ['Contact', 'contact']];
 
 function Navigation({parentToChild, modeChange}: any) {
 
   const {mode} = parentToChild;
+  const { language, toggleLanguage } = useLanguage();
+  const t = translations[language].nav;
+
+  const navItems = [
+    [t.expertise, 'expertise'],
+    [t.history, 'history'],
+    [t.projects, 'projects'],
+    [t.contact, 'contact'],
+  ];
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -47,13 +57,9 @@ function Navigation({parentToChild, modeChange}: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section)
     const expertiseElement = document.getElementById(section);
     if (expertiseElement) {
       expertiseElement.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
-    } else {
-      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
     }
   };
 
@@ -99,6 +105,23 @@ function Navigation({parentToChild, modeChange}: any) {
               </Button>
             ))}
           </Box>
+          {/* Language toggle */}
+          <Button
+            onClick={toggleLanguage}
+            sx={{
+              color: '#fff',
+              marginLeft: 'auto',
+              border: '1px solid rgba(255,255,255,0.5)',
+              borderRadius: '20px',
+              padding: '2px 12px',
+              minWidth: 'unset',
+              fontWeight: 700,
+              fontSize: '0.8rem',
+              '&:hover': { background: 'rgba(255,255,255,0.15)' },
+            }}
+          >
+            {language === 'en' ? '🇫🇷 FR' : '🇬🇧 EN'}
+          </Button>
         </Toolbar>
       </AppBar>
       <nav>
@@ -107,7 +130,7 @@ function Navigation({parentToChild, modeChange}: any) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },

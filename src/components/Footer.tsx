@@ -12,10 +12,10 @@ function Footer() {
   return (
     <footer>
       <div>
-        <a href="https://github.com/AhmadouBG" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-        <a href="https://www.linkedin.com/in/bamba-gueye/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+        <a href="https://github.com/AhmadouBG" target="_blank" rel="noreferrer"><GitHubIcon /></a>
+        <a href="https://www.linkedin.com/in/bamba-gueye/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
       </div>
-      <p>{t.credit} <a href="https://github.com/AhmadouBG" target="_blank" rel="noreferrer">Bamba GUEYE</a> 💜</p>
+      <p>{t.credit} <a href="https://github.com/AhmadouBG" target="_blank" rel="noreferrer">Bamba GUEYE</a></p>
     </footer>
   );
 }

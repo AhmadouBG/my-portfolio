@@ -20,15 +20,15 @@ import { translations } from '../i18n/translations';
 
 const drawerWidth = 240;
 
-function Navigation({parentToChild, modeChange}: any) {
+function Navigation({ parentToChild, modeChange }: any) {
 
-  const {mode} = parentToChild;
+  const { mode } = parentToChild;
   const { language, toggleLanguage } = useLanguage();
   const t = translations[language].nav;
 
   const navItems = [
     [t.expertise, 'expertise'],
-    [t.history, 'history'],
+    //[t.history, 'history'],
     [t.projects, 'projects'],
     [t.contact, 'contact'],
   ];
@@ -65,7 +65,7 @@ function Navigation({parentToChild, modeChange}: any) {
 
   const drawer = (
     <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <p className="mobile-menu-top"><ListIcon/>Menu</p>
+      <p className="mobile-menu-top"><ListIcon />Menu</p>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -94,9 +94,9 @@ function Navigation({parentToChild, modeChange}: any) {
             <MenuIcon />
           </IconButton>
           {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()}/>
+            <LightModeIcon onClick={() => modeChange()} />
           ) : (
-            <DarkModeIcon onClick={() => modeChange()}/>
+            <DarkModeIcon onClick={() => modeChange()} />
           )}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (

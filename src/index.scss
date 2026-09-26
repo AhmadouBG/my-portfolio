@@ -15,7 +15,7 @@ code {
 
 .main-container {
   position: relative;
-  background-color: #0d1116;
+  background-color: #061629;
 
 }
 
@@ -24,18 +24,26 @@ a {
 }
 
 a:hover {
-  color: #5000ca;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  color: #1581c0;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
-p, a, h1, h2, h3, h4, h5, label, button {
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+label,
+button {
   color: white;
   font-family: "Lato", sans-serif;
 }
 
 .navigation-bar {
   justify-content: space-between;
-  background-color: #0d1116;
+  background-color: #061629;
 
   button {
     font-size: 1.1rem;
@@ -50,7 +58,9 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 .navigation-bar-responsive {
-  span, p {
+
+  span,
+  p {
     color: #0d1116;
     font-family: "Lato", sans-serif;
   }
@@ -99,13 +109,21 @@ p, a, h1, h2, h3, h4, h5, label, button {
     background-color: #f8f9fa;
   }
 
-  p, a, h1, h2, h3, h4, h5, label, button {
+  p,
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  label,
+  button {
     color: #0d1116;
   }
 
   a:hover {
-    color: #5000ca;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    color: #1581c0;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
   }
 
   .navigation-bar svg {

@@ -13,25 +13,36 @@ export const translations = {
     },
     // Expertise
     expertise: {
+
       heading: 'Expertise',
+
       card1: {
-        title: 'Full Stack Web Development',
+        title: 'Backend & Web Development',
+
         description:
-          'I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.',
+          'I build backend applications and REST APIs using Python and modern web frameworks. I have worked on applications involving databases, asynchronous processing, real-time communication, and AI-powered features.',
+
         chipLabel: 'Tech stack:',
       },
+
       card2: {
-        title: 'DevOps & Automation',
+        title: 'AI, LLM & Data',
+
         description:
-          'Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.',
+          'I build practical AI and data solutions covering machine learning, document processing, RAG, LLM applications, computer vision, and data pipelines.',
+
         chipLabel: 'Tech stack:',
       },
+
       card3: {
-        title: 'GenAI & LLM',
+        title: 'DevOps & CI/CD',
+
         description:
-          'Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.',
+          'I use Git and GitHub to manage software development workflows and build automated CI/CD pipelines with GitHub Actions. I also containerize applications with Docker and work with deployment workflows.',
+
         chipLabel: 'Tech stack:',
-      },
+      }
+
     },
     // Timeline
     timeline: {
@@ -90,21 +101,21 @@ export const translations = {
     expertise: {
       heading: 'Expertise',
       card1: {
-        title: 'Développement Web Full Stack',
+        title: 'Développement Backend et Web',
         description:
-          "J'ai développé une grande variété d'applications web de zéro avec des technologies modernes comme React et Flask. Je maîtrise le cycle SDLC et le développement frontend + backend.",
+          "Je développe des applications backend et des API REST avec Python et des frameworks web modernes. J'ai travaillé sur des applications impliquant des bases de données, le traitement asynchrone, la communication en temps réel et des fonctionnalités basées sur l'IA.",
         chipLabel: 'Stack technique :',
       },
       card2: {
-        title: 'DevOps & Automatisation',
+        title: 'Ingénierie IA et Données',
         description:
-          "Une fois l'application développée, j'aide les clients à mettre en place des tests DevOps, des pipelines CI/CD et de l'automatisation du déploiement pour un lancement réussi.",
+          "Je développe des solutions d'IA et de données couvrant le traitement de données, l'apprentissage automatique, l'analyse de documents, le RAG et les pipelines de données. J'aime transformer des données brutes en applications pratiques et en informations utiles.",
         chipLabel: 'Stack technique :',
       },
       card3: {
-        title: 'GenAI & LLM',
+        title: 'GenAI, LLM & Sécurité IA',
         description:
-          "Restez compétitif en exploitant les derniers modèles d'IA dans vos projets. J'ai une expérience professionnelle dans la création de solutions GenAI de niveau entreprise pour une prise de décision intelligente.",
+          "J'expérimente avec les LLM locaux, les systèmes RAG, la vision par ordinateur et les applications basées sur l'IA. Je suis particulièrement intéressé par la construction de systèmes d'IA fiables et sécurisés et par l'exploration de l'intersection entre l'intelligence artificielle et la cybersécurité.",
         chipLabel: 'Stack technique :',
       },
     },

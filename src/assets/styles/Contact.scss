@@ -1,48 +1,108 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+  background-color: rgb(6, 22, 41); // Fond doux pour faire ressortir le formulaire
+
+  .items-container {
+    width: 100%;
+
+  }
+
+  .contact_wrapper {
+    width: 100%;
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-family: 'DomaineDispNar-Medium', sans-serif;
+    }
+
+    p {
+      color: #ffffff;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+  }
 }
 
 .contact-form {
-  padding-top: 20px;
-
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
-  }
-
-  button:hover {
-    background-color: #1581c0;
-    color: white;
-  }
-
-  fieldset {
-    background-color: white;
-  }
-}
-
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
-}
-
-.form-flex {
-  display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
-}
-
-.form-flex .MuiFormControl-root {
   width: 100%;
-}
 
-form {
-  width: 100% !important;
-}
+  .form-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; // Espace régulier entre les lignes
+    width: 100%;
+    margin-bottom: 24px;
 
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
+    .input-row {
+      display: flex;
+      gap: 24px; // Espace entre le nom et l'email
+      width: 100%;
+
+      @media (max-width: 600px) {
+        flex-direction: column; // S'empile uniquement sur mobile pour rester lisible
+      }
+    }
+
+    // Configuration et design de tous les champs Material-UI
+    .MuiFormControl-root {
+      width: 100%;
+
+      .MuiOutlinedInput-root {
+        background-color: #ffffff !important; // Force le fond blanc des inputs
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        &:hover .MuiOutlinedInput-notchedOutline {
+          border-color: #1581c0;
+        }
+
+        &.Mui-focused .MuiOutlinedInput-notchedOutline {
+          border-color: #1581c0;
+          border-width: 2px;
+        }
+      }
+
+      .MuiInputLabel-root {
+        font-family: 'DomaineDispNar-Medium', sans-serif;
+
+        &.Mui-focused {
+          color: #1581c0;
+        }
+      }
+    }
+  }
+
+  // Positionnement du bouton de validation
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      padding: 14px 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-transform: none; // Désactive les majuscules forcées par Material-UI
+      background-color: #ffffff;
+      color: #000000;
+      box-shadow: 0 4px 12px rgba(5, 15, 11, 0.15);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #1581c0;
+        box-shadow: 0 6px 20px rgba(21, 129, 192, 0.3);
+        transform: translateY(-2px); // Effet de survol dynamique
+      }
+
+      &.Mui-disabled {
+        background-color: #cccccc;
+        color: #888888;
+      }
+    }
+  }
 }
